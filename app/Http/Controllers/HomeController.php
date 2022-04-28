@@ -87,6 +87,12 @@ class HomeController extends Controller
         $count=order::where('phone',$user->phone)->count();
         return view ('user.showorder',compact('count','order'));
     }  
+    public function deletecart($id){
+        $data = order::find($id);
+        $data->delete();
+        return redirect()->back()->with('message','Product removed   sucessfully');
+        
+    }
  
 } 
  

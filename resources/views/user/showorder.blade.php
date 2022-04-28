@@ -114,7 +114,7 @@ https://templatemo.com/tm-546-sixteen-clothing
       </nav>
 
     @if(session()->has('message')) 
-    <div class = "alert alert-success" align="center" size="10px"> 
+    <div class = "alert alert-success" style = "color:red" align="center" size="10px"> 
       <button type="button" class="close" data-dismiss="alert">x</button> 
       {{session()->get('message')}} 
     </div>
@@ -127,12 +127,14 @@ https://templatemo.com/tm-546-sixteen-clothing
             <td style="padding: 10px; color:white;" font-size ="20px; " >Product name</td> 
             <td style="padding: 10px; color:white;" font-size ="20px; " >Quantity</td> 
             <td style="padding: 10px; color:white;" font-size ="20px; " >Price</td>  
+             <td style="padding: 10px; color:white;" font-size ="20px; "> Action</td> 
           </tr>
           @foreach ($order as  $orders)
             <tr style="background-color:black" > 
               <td style="padding:10px; color:white;" >{{ $orders->product_title }}</td>
                <td style="padding:10px; color:white;">{{ $orders->quantity }}</td> 
                <td style="padding:10px; color:white;">{{ $orders->price }}</td>
+               <td style="padding:10px; color:white;"><a class="btn btn-danger" href="{{ url('delete',$orders->id) }}">Delete</a></td>
 
 
             </tr>
