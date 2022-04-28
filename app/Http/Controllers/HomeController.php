@@ -9,6 +9,8 @@ use App\Models\Product;
 use App\Models\order;
 
 
+
+
 class HomeController extends Controller
 {
     public function redirect() 
@@ -22,7 +24,9 @@ class HomeController extends Controller
         else 
         {
             $data = product::paginate(3);
-            return view('user.home',compact('data'));         
+            $user = auth()->user();
+            $count=order::where('phone',$user->phone)->count();
+            return view('user.home',compact('data','count'));         
         } 
     } 
     public function index() 
@@ -31,13 +35,10 @@ class HomeController extends Controller
         {
             return redirect('redirect');
         }
-        else 
+       else 
         { 
             $data = product::paginate(3);
-            $user=auth()->user();
-            //$count=0;
-            $count=order::where('phone',$user->phone)->count();
-            return view('user.home',compact('data','count'));   
+            return view('user.home',compact('data'));   
         } 
              
     }  
@@ -79,6 +80,13 @@ class HomeController extends Controller
                 return redirect('login'); 
             }       
     }
+
+    public function showorder() {
+        $user=auth()->user();
+        $order=order::where('phone',$user->phone)->get();   
+        $count=order::where('phone',$user->phone)->count();
+        return view ('user.showorder',compact('count','order'));
+    }  
  
 } 
  

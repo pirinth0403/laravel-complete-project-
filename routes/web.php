@@ -45,3 +45,5 @@ Route::post('/updateproduct/{id}',[AdminController::class, 'updateproduct']);
 Route::get('/search',[HomeController::class, 'search']);  
 
 Route::post('/orderfood/{id}',[HomeController::class, 'orderfood']);  
+
+Route::get('/showorder',[HomeController::class, 'showorder']); 
