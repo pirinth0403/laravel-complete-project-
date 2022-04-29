@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\Orderfood;
 
 class AdminController extends Controller
 {
@@ -63,6 +64,20 @@ class AdminController extends Controller
 
 
         return redirect()->back()->with('message','Product updated  sucessfully');
+    }
+
+    public function showfoodorders(){
+        $order=orderfood::all();
+        return view('admin.showfoods',compact('order'));
+    }
+
+     public function updatestatus($id){
+        $order = orderfood::find($id);
+        $order->status ='delevered';
+        $order->save();
+
+        return redirect()->back();
+        
     }
 
 }

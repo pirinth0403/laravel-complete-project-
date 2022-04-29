@@ -50,3 +50,8 @@ Route::get('/showorder',[HomeController::class, 'showorder']);
 Route::get('/delete/{id}',[HomeController::class, 'deletecart']); 
 
 Route::post('/orderdetails',[HomeController::class, 'confirmorder']);
+
+
+Route::get('/showfoodorders',[AdminController::class, 'showfoodorders']); 
+
+Route::get('/updatestatus/{id}',[AdminController::class, 'updatestatus']); 
