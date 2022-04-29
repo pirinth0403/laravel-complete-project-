@@ -11,7 +11,7 @@
         <meta name="author" content="">
         <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-        <title>show order page</title>
+        <title>show order page</title> 
 
                         <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -49,7 +49,7 @@ https://templatemo.com/tm-546-sixteen-clothing
     
 
 
-    <!-- ***** Preloader End ***** -->
+    <!-- ***** Preloader End ***** --> 
 
     <!-- Header -->
     <header class="">
@@ -116,7 +116,7 @@ https://templatemo.com/tm-546-sixteen-clothing
     @if(session()->has('message')) 
     <div class = "alert alert-success" style = "color:red" align="center" size="10px"> 
       <button type="button" class="close" data-dismiss="alert">x</button> 
-      {{session()->get('message')}} 
+      {{session()->get('message')}}  
     </div>
     @endif 
     </header>
@@ -129,21 +129,32 @@ https://templatemo.com/tm-546-sixteen-clothing
             <td style="padding: 10px; color:white;" font-size ="20px; " >Price</td>  
              <td style="padding: 10px; color:white;" font-size ="20px; "> Action</td> 
           </tr>
+         
+
+         <!-- odres save in the database -->
+         
+          <form action="{{ url('orderdetails') }}" method="post">
+            @csrf
           @foreach ($order as  $orders)
             <tr style="background-color:black" > 
-              <td style="padding:10px; color:white;" >{{ $orders->product_title }}</td>
-               <td style="padding:10px; color:white;">{{ $orders->quantity }}</td> 
-               <td style="padding:10px; color:white;">{{ $orders->price }}</td>
+              <td style="padding:10px; color:white;" > 
+                <input type="text" name="productname[]" value=" {{ $orders->product_title }}" hidden=""> 
+                {{ $orders->product_title }}
+              </td>
+               <td style="padding:10px; color:white;"> 
+                <input type="text" name="quantity[]" value=" {{ $orders->quantity }}" hidden=""> 
+                {{ $orders->quantity }}
+              </td> 
+               <td style="padding:10px; color:white;">
+                 <input type="text" name="price[]" value=" {{ $orders->price }}" hidden=""> 
+                {{ $orders->price }}
+              </td>
                <td style="padding:10px; color:white;"><a class="btn btn-danger" href="{{ url('delete',$orders->id) }}">Delete</a></td>
-
-
-            </tr>
+              </tr>
           @endforeach
-
-
-
-
-        </table>
+             </table> 
+             <button class="btn btn-success">Confirm Order</button>
+          </form>
       </div> 
     
 

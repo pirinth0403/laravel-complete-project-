@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use App\Models\User;  
 use App\Models\Product;
 use App\Models\order;
+use App\Models\Orderfood;
 
 
 
@@ -87,11 +89,40 @@ class HomeController extends Controller
         $count=order::where('phone',$user->phone)->count();
         return view ('user.showorder',compact('count','order'));
     }  
-    public function deletecart($id){
+    public function deletecart($id)
+    {
         $data = order::find($id);
         $data->delete();
         return redirect()->back()->with('message','Product removed   sucessfully');
         
+    }
+    public function confirmorder(Request $request) 
+    {
+         $user= auth()->user();
+
+         $name=$user->name;
+         $phone=$user->phone;
+         $address=$user->address;
+
+         foreach($request->productname as $key=>$productname)
+         {
+            $order = new orderfood;
+            $order->product_name = $request->productname[$key];
+            $order->quantity = $request->quantity[$key];
+            $order->price = $request->price[$key];
+
+            $order->name=$name;
+            $order->phone=$phone;
+            $order->address=$address;
+
+            $order->status='not delevered';
+
+            $order->save();
+
+         } 
+                DB::table('orders')->where('phone',$phone)->delete();                 
+                return redirect()->back()->with('message','Product  cancelled sucessfully');
+
     }
  
 } 
