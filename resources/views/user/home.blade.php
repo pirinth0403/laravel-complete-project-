@@ -11,7 +11,7 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-    <title>Sixteen Clothing HTML Template</title>
+    <title> food order system </title> 
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -51,7 +51,7 @@ https://templatemo.com/tm-546-sixteen-clothing
     <header class="">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand" href="index.html"><h2>Sixteen <em>Clothing</em></h2></a>
+          <a class="navbar-brand" href="index.html"><h2> online food  <em> order </em></h2></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -117,17 +117,17 @@ https://templatemo.com/tm-546-sixteen-clothing
 
     <!-- Page Content -->
     <!-- Banner Starts Here -->
-    <div class="banner header-text">
-      <div class="owl-banner owl-carousel">
+    <div class="banner header-text"> 
+      <div class="owl-banner owl-carousel"> 
         <div class="banner-item-01">
           <div class="text-content">
-            <h4>Best Offer</h4>
-            <h2>New Arrivals On Sale</h2>
+            <h4>Best food </h4>
+            <h2> Healthy food </h2>
           </div>
         </div>
         <div class="banner-item-02">
           <div class="text-content">
-            <h4>Flash Deals</h4>
+            <h4>Flash Deals</h4>3ee3
             <h2>Get your best products</h2>
           </div>
         </div>
@@ -148,17 +148,17 @@ https://templatemo.com/tm-546-sixteen-clothing
         <div class="row">
           <div class="col-md-12">
             <div class="section-heading">
-              <h2>About Sixteen Clothing</h2>
+              <h2>About our system </h2>
             </div>
           </div>
           <div class="col-md-6">
             <div class="left-content">
-              <h4>Looking for the best products?</h4>
-              <p><a rel="nofollow" href="https://templatemo.com/tm-546-sixteen-clothing" target="_parent">This template</a> is free to use for your business websites. However, you have no permission to redistribute the downloadable ZIP file on any template collection website. <a rel="nofollow" href="https://templatemo.com/contact">Contact us</a> for more info.</p>
+              <h4>Looking for the best foods?</h4> 
+              <p> Our website online food  ordering system provides you with a powerful mechanism to expand your loyal customer base & ultimately, sell more. <a rel="nofollow" href="https://templatemo.com/contact">Contact us</a> for more info.</p>
               <ul class="featured-list">
                 <li><a href="#">Lorem ipsum dolor sit amet</a></li>
-                <li><a href="#">Consectetur an adipisicing elit</a></li>
-                <li><a href="#">It aquecorporis nulla aspernatur</a></li>
+                <li><a href="#">Consectetur an adipisicing elit</a></li> 
+                <li><a href="#">It aquecorporis nulla aspernatur</a></li> 
                 <li><a href="#">Corporis, omnis doloremque</a></li>
                 <li><a href="#">Non cum id reprehenderit</a></li>
               </ul>
@@ -167,7 +167,7 @@ https://templatemo.com/tm-546-sixteen-clothing
           </div>
           <div class="col-md-6">
             <div class="right-image">
-              <img src="assets/images/feature-image.jpg" alt="">
+              <img src="assets/images/food.jpeg" alt=""> 
             </div>
           </div>
         </div>
@@ -199,11 +199,11 @@ https://templatemo.com/tm-546-sixteen-clothing
     <footer>
       <div class="container">
         <div class="row">
-          <div class="col-md-12">
+          <div class="col-md-12"> 
             <div class="inner-content">
-              <p>Copyright &copy; 2022 Sixteen Clothing Co., Ltd. 
+              <p>Copyright &copy; 2022 online food order system. 
             
-            - Design: <a rel="nofollow noopener" href="https://templatemo.com" target="_blank">TemplateMo</a></p>
+            {{-- - Design: <a rel="nofollow noopener" href="https://templatemo.com" target="_blank">TemplateMo</a></p> --}}
             </div>
           </div>
         </div>
