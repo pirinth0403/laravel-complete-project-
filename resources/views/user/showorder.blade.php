@@ -136,7 +136,7 @@ https://templatemo.com/tm-546-sixteen-clothing
           <form action="{{ url('orderdetails') }}" method="post">
             @csrf
           @foreach ($order as  $orders)
-            <tr style="background-color:black" > 
+            <tr style="background-color:black" >  
               <td style="padding:10px; color:white;" > 
                 <input type="text" name="productname[]" value=" {{ $orders->product_title }}" hidden=""> 
                 {{ $orders->product_title }}

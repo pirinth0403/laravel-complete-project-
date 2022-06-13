@@ -15,14 +15,14 @@ use App\Models\Orderfood;
 
 class HomeController extends Controller
 {
-    public function redirect() 
+    public function redirect()  
     {  
         $usertype=Auth::user()->usertype; 
 
         if($usertype=='1')     
         {
             return view ('admin.home'); 
-        }
+        } 
         else 
         {
             $data = product::paginate(3);
@@ -121,7 +121,7 @@ class HomeController extends Controller
 
          } 
                 DB::table('orders')->where('phone',$phone)->delete();                 
-                return redirect()->back()->with('message','Product  cancelled sucessfully');
+                return redirect()->back()->with('message','Product  comfirmed sucessfully');
 
     }
  

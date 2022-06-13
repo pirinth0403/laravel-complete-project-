@@ -24,12 +24,12 @@ Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified'
-])->group(function () {
+])->group(function () { 
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
-});
-Route::get('/redirect',[HomeController::class, 'redirect']); 
+}); 
+Route::get('/redirect',[HomeController::class, 'redirect']);
 Route::get('/',[HomeController::class, 'index']);
 Route::get('/product',[AdminController::class, 'product']); 
 Route::post('/uploadproduct',[AdminController::class, 'uploadproduct']);  

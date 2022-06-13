@@ -1,19 +1,19 @@
-<div class="latest-products">
+<div class="latest-products"> 
     <div class="container">
       <div class="row">
         <div class="col-md-12">
           <div class="section-heading">
-            <h2>Latest Products</h2>
+            <h2>Latest Products</h2>  
             <a href="products.html">view all products <i class="fa fa-angle-right"></i></a>
            
-            {{-- search button coding --}}
+            {{-- search button coding --}} 
 
             <form action="{{ url('search') }}" method="get" class="form-inline" style="float:right; padding:10px;" >
               @csrf 
               <input class="flow-control" type="search" name="search" placeholder="search">
               {{-- <input class="btn btn-success" type="submit" value="Search" >  --}} 
              
-              <button class="btn btn-success">Search</button> 
+              <button class="btn btn-success">Search</button>   
             </form>
 
           </div>

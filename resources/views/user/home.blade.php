@@ -11,10 +11,10 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-    <title> food order system </title> 
+    <title> food order system </title>   
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> 
 <!--
 
 TemplateMo 546 Sixteen Clothing
@@ -51,25 +51,25 @@ https://templatemo.com/tm-546-sixteen-clothing
     <header class="">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand" href="index.html"><h2> online food  <em> order </em></h2></a>
+          <a class="navbar-brand" href=""><h2> online food  <em> order </em></h2></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="index.html">Home
-                  <span class="sr-only">(current)</span>
+                <a class="nav-link" href="#">Home  
+                  <span class="sr-only">(current)</span> 
                 </a>
               </li> 
               <li class="nav-item">
-                <a class="nav-link" href="products.html">Our Products</a>
+                <a class="nav-link" href="products.html">Menu</a> 
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="about.html">About Us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact Us</a>
+                <a class="nav-link" href="contact.html">Contact Us</a> 
               </li>
 
             
@@ -113,32 +113,41 @@ https://templatemo.com/tm-546-sixteen-clothing
       {{session()->get('message')}} 
     </div>
     @endif 
-    </header>
+    </header> 
 
     <!-- Page Content -->
     <!-- Banner Starts Here -->
     <div class="banner header-text"> 
       <div class="owl-banner owl-carousel"> 
-        <div class="banner-item-01">
-          <div class="text-content">
-            <h4>Best food </h4>
-            <h2> Healthy food </h2>
+        
+        <div class="banner-item-01">     
+          <div class="text-content"> 
+            <h4> bestfood  </h4> 
+            <h2> Healthy food </h2>  
+            <?php 
+            
+              
+            ?>
           </div>
-        </div>
+        </div> 
+
         <div class="banner-item-02">
           <div class="text-content">
-            <h4>Flash Deals</h4>3ee3
-            <h2>Get your best products</h2>
+            <h4>Flash Deals</h4>
+            <h2>Get your best products</h2> 
           </div>
         </div>
+
         <div class="banner-item-03">
           <div class="text-content">
             <h4>Last Minute</h4>
             <h2>Grab last minute deals</h2>
           </div>
         </div>
+          
       </div>
     </div>
+    
     <!-- Banner Ends Here --> 
 
     @include('user.product') 
@@ -156,11 +165,11 @@ https://templatemo.com/tm-546-sixteen-clothing
               <h4>Looking for the best foods?</h4> 
               <p> Our website online food  ordering system provides you with a powerful mechanism to expand your loyal customer base & ultimately, sell more. <a rel="nofollow" href="https://templatemo.com/contact">Contact us</a> for more info.</p>
               <ul class="featured-list">
-                <li><a href="#">Lorem ipsum dolor sit amet</a></li>
-                <li><a href="#">Consectetur an adipisicing elit</a></li> 
-                <li><a href="#">It aquecorporis nulla aspernatur</a></li> 
-                <li><a href="#">Corporis, omnis doloremque</a></li>
-                <li><a href="#">Non cum id reprehenderit</a></li>
+                <li><a href="#">sandwich items</a></li> 
+                <li><a href="#">Food items </a></li> 
+                <li><a href="#">Bread items </a></li> 
+                <li><a href="#">Juice items </a></li>
+                <li><a href="#">Pizza items </a></li> 
               </ul>
               <a href="about.html" class="filled-button">Read More</a>
             </div>
@@ -233,8 +242,8 @@ https://templatemo.com/tm-546-sixteen-clothing
           t.style.color='#fff';
           }
       }
-    </script>
-
+    </script> 
+ 
 
   </body>
 

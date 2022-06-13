@@ -1,6 +1,6 @@
 <x-guest-layout>
     <x-jet-authentication-card>
-        <x-slot name="logo">
+        <x-slot name="logo"> 
             <x-jet-authentication-card-logo />
         </x-slot>
 
@@ -11,26 +11,23 @@
 
             <div>
                 <x-jet-label for="name" value="{{ __('Name') }}" />
-                <x-jet-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
+                <x-jet-input id="name" class="block mt-1 w-full" type="text" name="name"  required autofocus autocomplete="name" />
             </div>
 
             <div class="mt-4">
                 <x-jet-label for="email" value="{{ __('Email') }}" />
-                <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
-            </div>
-
-            <div class="mt-4">
-                <x-jet-label for="phone" value="{{ __('Phone') }}" />
-                <x-jet-input id="phone" class="block mt-1 w-full" type="number" name="phone" :value="old('phone')" required />
+                <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" required />
             </div> 
 
             <div class="mt-4">
+                <x-jet-label for="phone" value="{{ __('Phone') }}" />  
+                <x-jet-input id="phone" class="block mt-1 w-full" type="tel" name="phone"  pattern="[0-9]{3}[0-9]{3}[0-9]{4}"  required  />    
+            </div>   
+
+            <div class="mt-4">
                 <x-jet-label for="address" value="{{ __('Address') }}" />
-                <x-jet-input id="address" class="block mt-1 w-full" type="text" name="address" :value="old('text')" required />
+                <x-jet-input id="address" class="block mt-1 w-full" type="text" name="address" required />
             </div>
-
-
-
             <div class="mt-4">
                 <x-jet-label for="password" value="{{ __('Password') }}" />
                 <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
@@ -56,7 +53,7 @@
                         </div>
                     </x-jet-label>
                 </div>
-            @endif
+            @endif 
 
             <div class="flex items-center justify-end mt-4">
                 <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
