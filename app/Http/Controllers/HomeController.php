@@ -124,6 +124,14 @@ class HomeController extends Controller
                 return redirect()->back()->with('message','Product  comfirmed sucessfully');
 
     }
- 
-} 
- 
+
+    public function menuproduct() {
+        return view('user/menu'); 
+    }
+    public function about() { 
+        return view('user/abouts'); 
+    } 
+    public function contact() { 
+        return view('user/contact'); 
+    }
+}  

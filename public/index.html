@@ -1,5 +1,8 @@
 
 
+
+
+
 <!DOCTYPE html>
 <html lang="en">
   
@@ -16,11 +19,8 @@
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> 
 <!--
-
 TemplateMo 546 Sixteen Clothing
-
 https://templatemo.com/tm-546-sixteen-clothing
-
 -->
 
     <!-- Additional CSS Files -->
@@ -71,28 +71,24 @@ https://templatemo.com/tm-546-sixteen-clothing
               <li class="nav-item">
                 <a class="nav-link" href="contact.html">Contact Us</a> 
               </li>
-
-            
-                    
-                       
-                  
-                    <li class="nav-item"> 
+                      
+              <li class="nav-item"> 
                      
-                      @if (Route::has('login'))
+                      @if(Route::has('login'))
                         @auth
                         <li class="nav-item">
                      
                           <a class="nav-link" href="{{ url('showorder') }}">
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             Order[{{ $count  }}]</a>       
-                        </li>  
+               </li>  
           
                         
                     <x-app-layout> 
                     </x-app-layout>   
                     
                     
-                    @else 
+                 @else 
                     <li> <a href="{{ route('login') }}" class="nav-link"  >Log in</a> </li>
 
                     @if (Route::has('register'))
@@ -124,7 +120,6 @@ https://templatemo.com/tm-546-sixteen-clothing
           <div class="text-content"> 
             <h4> bestfood  </h4> 
             <h2> Healthy food </h2>  
-            xs
           </div>
         </div> 
 
@@ -147,7 +142,7 @@ https://templatemo.com/tm-546-sixteen-clothing
     
     <!-- Banner Ends Here --> 
 
-    @include('user.product') 
+    
 
     <div class="best-features">
       <div class="container">
@@ -209,7 +204,7 @@ https://templatemo.com/tm-546-sixteen-clothing
             <div class="inner-content">
               <p>Copyright &copy; 2022 online food order system. 
             
-            {{-- - Design: <a rel="nofollow noopener" href="https://templatemo.com" target="_blank">TemplateMo</a></p> --}}
+            <a rel="nofollow noopener" href="https://templatemo.com" target="_blank">TemplateMo</a></p> 
             </div>
           </div>
         </div>
@@ -240,7 +235,7 @@ https://templatemo.com/tm-546-sixteen-clothing
           }
       }
     </script> 
- {{-- <script> 
+ <!-- <script> 
             let slideIndex =0;
              banner (); 
              function banner () {   
@@ -263,7 +258,7 @@ https://templatemo.com/tm-546-sixteen-clothing
                 setTimeout(banner,2000);
              } 
 
-</script>   --}}
+</script>    -->
 
 
   </body>

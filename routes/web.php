@@ -26,7 +26,7 @@ Route::middleware([
     'verified'
 ])->group(function () { 
     Route::get('/dashboard', function () {
-        return view('dashboard');
+        return view('dashboard'); 
     })->name('dashboard');
 }); 
 Route::get('/redirect',[HomeController::class, 'redirect']);
@@ -55,3 +55,8 @@ Route::post('/orderdetails',[HomeController::class, 'confirmorder']);
 Route::get('/showfoodorders',[AdminController::class, 'showfoodorders']); 
 
 Route::get('/updatestatus/{id}',[AdminController::class, 'updatestatus']); 
+
+//Route::get('/view',[HomeController::class, 'indexview']); 
+Route::get('/menu',[HomeController::class, 'menuproduct']); 
+Route::get('/aboutpage',[HomeController::class, 'about']);
+Route::get('/contactpage',[HomeController::class, 'contact']);
