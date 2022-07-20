@@ -10,4 +10,4 @@
             @livewire('api.api-token-manager')
         </div>
     </div>
-</x-app-layout>
+</x-app-layout> 

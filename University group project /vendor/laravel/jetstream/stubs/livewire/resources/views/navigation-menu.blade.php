@@ -105,6 +105,7 @@
                                     {{ __('API Tokens') }}
                                 </x-jet-dropdown-link>
                             @endif
+                            hiii 
 
                             <div class="border-t border-gray-100"></div>
 
@@ -208,7 +209,7 @@
                     @foreach (Auth::user()->allTeams() as $team)
                         <x-jet-switchable-team :team="$team" component="jet-responsive-nav-link" />
                     @endforeach
-                @endif
+                @endif 
             </div>
         </div>
     </div>
